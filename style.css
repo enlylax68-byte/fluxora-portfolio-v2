@@ -256,3 +256,181 @@ gap:18px;
     opacity:1;
     transform:translateY(0);
 }
+/* ==========================================
+   MODULE 2 - ABOUT SECTION
+========================================== */
+
+.about{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:#4F8CFF;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:48px;
+    margin:20px 0;
+}
+
+.section-title p{
+    color:#bdbdbd;
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* About Cards */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.about-card{
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    transition:.4s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#4F8CFF;
+
+    box-shadow:0 15px 40px rgba(79,140,255,.25);
+
+}
+
+.about-card h3{
+
+    color:#4F8CFF;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.about-card p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+}
+
+/* Stats */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    margin-top:80px;
+
+}
+
+.stat{
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(79,140,255,.2);
+
+}
+
+.stat h3{
+
+    font-size:46px;
+
+    color:#4F8CFF;
+
+    margin-bottom:10px;
+
+}
+
+.stat p{
+
+    color:#d0d0d0;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.section-title p{
+
+font-size:16px;
+
+}
+
+.about{
+
+padding:90px 6%;
+
+}
+
+}/* About Animation */
+
+.about-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.about-card.show-card{
+    opacity:1;
+    transform:translateY(0);
+    transition:0.8s ease;
+}
