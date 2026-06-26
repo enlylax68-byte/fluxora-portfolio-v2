@@ -54,3 +54,83 @@ document.querySelectorAll(".hero-buttons a").forEach(btn => {
 // ===== Console Message =====
 
 console.log("🚀 FLUXORA Portfolio V2 Loaded Successfully");
+/* ===================================
+   MODULE 2 - ABOUT ANIMATIONS
+=================================== */
+
+// ===== Animated Counters =====
+
+const stats = document.querySelectorAll(".stat h3");
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+
+            const target = +counter.getAttribute("data-target");
+
+            let count = 0;
+
+            const speed = target / 80;
+
+            const update = () => {
+
+                count += speed;
+
+                if(count < target){
+
+                    counter.innerText = Math.ceil(count);
+
+                    requestAnimationFrame(update);
+
+                }else{
+
+                    counter.innerText = target;
+
+                }
+
+            }
+
+            update();
+
+            counterObserver.unobserve(counter);
+
+        }
+
+    });
+
+});
+
+stats.forEach(stat => {
+
+    counterObserver.observe(stat);
+
+});
+
+
+// ===== About Card Reveal =====
+
+const aboutCards = document.querySelectorAll(".about-card");
+
+const aboutObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show-card");
+
+        }
+
+    });
+
+});
+
+aboutCards.forEach(card=>{
+
+    aboutObserver.observe(card);
+
+});
