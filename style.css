@@ -433,4 +433,320 @@ padding:90px 6%;
     opacity:1;
     transform:translateY(0);
     transition:0.8s ease;
+}/* ==========================================
+   MODULE 3 - SERVICES
+========================================== */
+
+.services{
+    padding:120px 8%;
 }
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.service-card{
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    transition:0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:250px;
+    height:250px;
+    background:radial-gradient(circle,
+    rgba(79,140,255,0.35),
+    transparent 70%);
+    transition:.6s;
+}
+
+.service-card:hover::before{
+    top:-40px;
+    left:-40px;
+}
+
+.service-card:hover{
+    transform:translateY(-12px);
+    border-color:#4F8CFF;
+    box-shadow:0 20px 45px rgba(79,140,255,.25);
+}
+
+.service-card .icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    color:#4F8CFF;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.service-card p{
+    color:#d4d4d4;
+    line-height:1.8;
+    font-size:16px;
+}
+
+@media(max-width:768px){
+
+.services{
+    padding:90px 6%;
+}
+
+.services-grid{
+    gap:20px;
+}
+
+.service-card{
+    padding:28px;
+}
+
+.service-card h3{
+    font-size:21px;
+}
+
+.service-card .icon{
+    font-size:48px;
+}
+
+}/* ===== Service Reveal Animation ===== */
+
+.service-card{
+    opacity:0;
+    transform:translateY(60px);
+}
+
+.service-card.show-service{
+    opacity:1;
+    transform:translateY(0);
+    transition:.8s ease;
+   }/* ==========================================
+   MODULE 4 - SKILLS SECTION
+========================================== */
+
+.skills{
+    padding:120px 8%;
+}
+
+.skills-container{
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+.skill-box{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    transition:.35s ease;
+}
+
+.skill-box:hover{
+    transform:translateY(-8px);
+    border-color:#4F8CFF;
+    box-shadow:0 15px 40px rgba(79,140,255,.25);
+}
+
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.skill-title span:first-child{
+    color:#fff;
+}
+
+.percent{
+    color:#4F8CFF;
+    font-weight:700;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:rgba(255,255,255,.08);
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0;
+    height:100%;
+    border-radius:50px;
+    background:linear-gradient(90deg,#4F8CFF,#00D4FF);
+    box-shadow:0 0 18px rgba(79,140,255,.45);
+    transition:width 1.8s ease;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.skills{
+    padding:90px 6%;
+}
+
+.skill-title{
+    font-size:16px;
+}
+
+.progress{
+    height:10px;
+}
+
+}/* ===============================
+   MODULE 4 REVEAL EFFECT
+=============================== */
+
+.skill-box{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.skill-box.show-skill{
+    opacity:1;
+    transform:translateY(0);
+    transition:0.8s ease;
+}
+/* ==========================================
+   MODULE 5 - PROJECTS SECTION
+========================================== */
+
+.projects{
+    padding:120px 8%;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+    margin-top:60px;
+}
+
+.project-card{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.4s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    border-color:#4F8CFF;
+    box-shadow:0 20px 45px rgba(79,140,255,.25);
+}
+
+.project-image{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:80px;
+    background:linear-gradient(135deg,#1d2a44,#101828);
+}
+
+.project-content{
+    padding:30px;
+}
+
+.project-content h3{
+    color:#4F8CFF;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.project-content p{
+    color:#d8d8d8;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.tags span{
+    background:rgba(79,140,255,.15);
+    color:#4F8CFF;
+    padding:8px 14px;
+    border-radius:50px;
+    border:1px solid rgba(79,140,255,.3);
+    font-size:14px;
+}
+
+.project-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.project-buttons a{
+    flex:1;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+.projects{
+    padding:90px 6%;
+}
+
+.project-image{
+    height:180px;
+    font-size:60px;
+}
+
+.project-content{
+    padding:22px;
+}
+
+.project-content h3{
+    font-size:21px;
+}
+
+}/* ===========================
+   MODULE 5 REVEAL EFFECT
+=========================== */
+
+.project-card{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+}
+
+.project-card.show-project{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+   }
