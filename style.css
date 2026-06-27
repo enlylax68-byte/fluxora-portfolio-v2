@@ -1187,4 +1187,446 @@ padding:28px;
 
     transition:.8s ease;
 
+}/* ==========================================
+   MODULE 9 - ANIME FOOTER
+========================================== */
+
+.anime-footer{
+
+    position:relative;
+    padding:100px 8% 40px;
+    text-align:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(5,10,25,.95),
+    rgba(8,12,30,.98));
+
+    border-top:1px solid rgba(79,140,255,.25);
+
+}
+
+.anime-footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(79,140,255,.12),
+    transparent 65%);
+
+    pointer-events:none;
+
+}
+
+.footer-logo{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.footer-logo h2{
+
+    font-size:42px;
+
+    color:#4F8CFF;
+
+    letter-spacing:4px;
+
+    text-shadow:0 0 25px #4F8CFF;
+
+}
+
+.footer-logo p{
+
+    margin-top:10px;
+
+    color:#cfcfcf;
+
+}
+
+.footer-links{
+
+    margin:40px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#4F8CFF;
+
+    text-shadow:0 0 12px #4F8CFF;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.footer-social a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:#4F8CFF;
+
+    transform:translateY(-8px) scale(1.1);
+
+    box-shadow:0 0 25px #4F8CFF;
+
+}
+
+.footer-copy{
+
+    color:#aaaaaa;
+
+    font-size:14px;
+
+}
+
+/* Scroll Button */
+
+#scrollTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#4F8CFF;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 0 25px rgba(79,140,255,.5);
+
+}
+
+/* Floating Buttons */
+
+.float-whatsapp,
+.float-instagram{
+
+    position:fixed;
+
+    left:20px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:28px;
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.float-whatsapp{
+
+    bottom:100px;
+
+    background:#25D366;
+
+}
+
+.float-instagram{
+
+    bottom:30px;
+
+    background:#E1306C;
+
+}
+
+.float-whatsapp:hover,
+.float-instagram:hover{
+
+    transform:scale(1.15);
+
+}
+
+/* Sakura Layer */
+
+#sakura-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+@media(max-width:768px){
+
+.footer-logo h2{
+
+font-size:30px;
+
+}
+
+.footer-links{
+
+gap:15px;
+
+}
+
+.footer-social a{
+
+width:48px;
+
+height:48px;
+
+font-size:20px;
+
+}
+
+}/* ===============================
+   MODULE 9 SAKURA ANIMATION
+=============================== */
+
+@keyframes fall{
+
+0%{
+
+transform:
+translateY(-60px)
+translateX(0)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:
+translateY(50vh)
+translateX(40px)
+rotate(180deg);
+
+}
+
+100%{
+
+transform:
+translateY(110vh)
+translateX(-40px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}/* ==========================================
+   MODULE 10 - ULTRA PREMIUM
+========================================== */
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+inset:0;
+background:#050816;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:1s;
+
+}
+
+.loader-circle{
+
+width:90px;
+height:90px;
+border:6px solid rgba(255,255,255,.15);
+border-top:6px solid #4F8CFF;
+border-radius:50%;
+animation:spin 1s linear infinite;
+
+}
+
+#loader h2{
+
+margin-top:30px;
+color:#4F8CFF;
+letter-spacing:5px;
+
+}
+
+#loader p{
+
+color:#ddd;
+
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* Progress Bar */
+
+#progress-bar{
+
+position:fixed;
+top:0;
+left:0;
+height:4px;
+width:0%;
+background:#4F8CFF;
+z-index:9999;
+box-shadow:0 0 15px #4F8CFF;
+
+}
+
+/* Cursor */
+
+.cursor-dot{
+
+width:8px;
+height:8px;
+background:#4F8CFF;
+position:fixed;
+border-radius:50%;
+pointer-events:none;
+z-index:99999;
+
+}
+
+.cursor-outline{
+
+width:35px;
+height:35px;
+border:2px solid #4F8CFF;
+position:fixed;
+border-radius:50%;
+pointer-events:none;
+z-index:99998;
+transition:.08s;
+
+}
+
+/* Particles */
+
+#particles{
+
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+
+}@keyframes particleUp{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
 }
